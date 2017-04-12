@@ -1,0 +1,22 @@
+{
+  "name": "chat",
+  "description": "one to one chating application",
+  "main": "server.js",
+  "authors": [
+    "Himanshu Nath <hnath723@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Himanshu-Nath/Chat",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./static/assets/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
