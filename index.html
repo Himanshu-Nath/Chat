@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Chat</title>
+  <title>ChaTnoW</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
   <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
   <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="assets/js/client.js"></script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-            <a class="navbar-brand" href="#">Chating Fever</a>
-            </div>
-            <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            </ul>
-        </div>
-    </nav>
-<div class="container-fluid col-md-6 col-md-offset-3">
-    <!-- For Add User -->
-    <div class="add user page">
-        <h1 class="text-center">Chatting Web Application</h1>
-        <h3 class="text-center">Add Your Name</h3>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="userName">
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <a class="navbar-brand" href="#">ChaTnoW</a>
                 </div>
+                <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                </ul>
             </div>
-            <div class="alertBox">
-                <div class="alert alert-danger" data-dismiss="alert" aria-label="close">
-                <strong>Insert Value!</strong> Field can't be empty.
-                </div>
-            </div>	
-            <hr>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="well text-center">
-                        <button type="button" onclick="addUser();" class="btn btn-default">Add User</button>
+        </nav>
+    <div class="container-fluid col-md-6 col-md-offset-3">
+        <!-- For Add User -->
+        <ul class="pages">
+            <li class="addUserPage form" id="addUserPage">
+                <h1 class="text-center">Chatting Web Application</h1>
+                <h3 class="text-center">Add Your Name</h3>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" class="userName form-control" id="userName">
+                        </div>
+                    </div>
+                    <div class="alertBox">
+                        <div class="alert alert-danger" data-dismiss="alert" aria-label="close">
+                        <strong>Insert Value!</strong> Field can't be empty.
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="well text-center">
+                                <button type="button" id="addUser" class="btn btn-default">Add User</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="alertBoxSuccess">
+                        <div class="alert alert-success" data-dismiss="alert" aria-label="close">
+                        <strong>Success!</strong> Successfully Done.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="alertBoxSuccess">
-                <div class="alert alert-success" data-dismiss="alert" aria-label="close">
-                <strong>Success!</strong> Successfully Done.
+            </li>
+            <!-- For Chating Message -->    
+                <li class="chatBox" id="chatBox">
+                <div class="chatArea">
+                    <ul class="chatMessages" id="chatMessages"></ul>
                 </div>
-            </div>
-        </div>
+                <input class="messageTyped" id="messageTyped" placeholder="Type here..."/>
+            </li>
+        </ul>
     </div>
-
-    <!-- For Chating Message -->
-    <ul class="pages">
-        <li class="chat box">
-        <div class="chatArea">
-            <ul class="messages"></ul>
-        </div>
-        <input class="inputMessage" placeholder="Type here..."/>
-        </li>
-    </ul>
-</div> 
-<script src="/socket.io/socket.io.js"></script> 
-</body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="assets/js/client.js"></script> 
+    </body>
 </html>
